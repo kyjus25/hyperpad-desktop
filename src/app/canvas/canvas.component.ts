@@ -4,6 +4,7 @@ import {Observable} from 'rxjs/Observable';
 import {Subject} from 'rxjs/Subject';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import {ReplaySubject} from 'rxjs/ReplaySubject';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-canvas',
@@ -12,8 +13,25 @@ import {ReplaySubject} from 'rxjs/ReplaySubject';
 })
 export class CanvasComponent implements OnInit {
 
-  constructor() {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.loadScript('editor.js')
+  }
+
+
+  public loadScript(js) {
+    console.log('loading ' + js);
+    let body = <HTMLDivElement> document.body;
+    let script = document.createElement('script');
+    script.innerHTML = '';
+    script.src = 'assets/js/' + js;
+    script.async = true;
+    script.defer = true;
+    body.appendChild(script);
+  }
 
 }

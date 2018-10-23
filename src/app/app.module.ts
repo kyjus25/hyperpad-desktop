@@ -23,7 +23,7 @@ import {SessionComponent} from './session/session.component';
     AppComponent,
     CanvasComponent,
     LandingComponent,
-    SessionComponent
+    SessionComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes, { useHash: true }),

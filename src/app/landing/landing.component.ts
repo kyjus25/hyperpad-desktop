@@ -27,4 +27,9 @@ export class LandingComponent implements OnInit {
     console.log('sessionID is: ', this.sessionID);
   }
 
+  // a unique random key generator
+  public getUniqueId () {
+    return Math.random().toString(36).substr(2, 9)
+  }
+
 }
