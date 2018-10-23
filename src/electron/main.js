@@ -15,12 +15,13 @@ function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow(
     {
-      width: 1000,
-      height: 730,
+      width: 800,
+      height: 500,
       frame: false,
-      minWidth: 1000,
-      maxWidth: 1000,
-      minHeight: 730,
+      minWidth: 800,
+      maxWidth: 800,
+      minHeight: 500,
+      maxHeight: 500,
       icon: path.join(__dirname, 'assets/pokeball.png')
     })
 

@@ -6,11 +6,11 @@ import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import {ReplaySubject} from 'rxjs/ReplaySubject';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-canvas',
+  templateUrl: './canvas.component.html',
+  styleUrls: ['./canvas.component.css']
 })
-export class AppComponent implements OnInit {
+export class CanvasComponent implements OnInit {
 
   constructor() {}
 

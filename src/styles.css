@@ -1,85 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900');
+
 body {
   margin: 0;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
 }
-.right-side {
-  display: table-cell;
-  padding: 5px;
-  padding-right: 10px;
-  width: 100%;
-  height: 100%;
-}
-.left-side {
-  padding: 5px;
-  height: 100%;
-  display: table-cell;
-}
-.doclist {
-  width: 350px;
+
+#close {
+  position: fixed;
+  right: 0;
+  top: 0;
+  color: white;
+  border: none;
+  border-radius: 0;
+  background-color: indianred;
+  border-bottom-left-radius: 10px;
   font-size: 15px;
-  border-width: 1px 0 0 0;
-  border-style: solid;
-  border-color: #AAAAAA;
   cursor: pointer;
 }
-.docitem {
-  border-width: 0px 1px 1px 1px;
-  border-style: solid;
-  border-color: #AAAAAA;
-  height: 40px;
-}
-.docitem-selected {
-  border-width: 0px 1px 1px 1px;
-  border-style: solid;
-  border-color: #AAAAAA;
-  background: #DFDFDF;
-  height: 40px;
-}
-.docitem-special {
-  border-width: 0px 1px 1px 1px;
-  border-style: solid;
-  border-color: #AAAAAA;
-  background: #F1F1F1;
-  color: #999999;
-  text-align: center;
-  height: 40px;
-}
-.docitem-contents {
-  display: inline;
-  color: #222222;
-}
-.docitem-contents-top {
-  padding-left: 3px;
-  padding-top: 3px;
-  font-family: sans-serif;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-}
-.docitem-contents-bottom {
-  font-family: sans-serif;
-  color: grey;
-  font-size: 11px;
-}
-.doc-title-input {
-  font-weight: bold;
-  width: 100%;
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-.closeButton {
-  float: right;
-  margin-top: 6px;
-  margin-right: 10px;
-  padding-left: 4px;
-  width: 15px;
-  height: 18px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: red;
+#close:hover {
   background-color: red;
-  color: white;
-  font-family: sans-serif;
-  font-weight: bold;
 }
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+

@@ -6,14 +6,21 @@ import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import {ReplaySubject} from 'rxjs/ReplaySubject';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-session',
+  templateUrl: './session.component.html',
+  styleUrls: ['./session.component.css']
 })
-export class AppComponent implements OnInit {
+export class SessionComponent implements OnInit {
+
+  public display = false;
+  public sessionID = null;
 
   constructor() {}
 
   ngOnInit() {}
+
+  public joinSession() {
+    console.log('sessionID is: ', this.sessionID);
+  }
 
 }
