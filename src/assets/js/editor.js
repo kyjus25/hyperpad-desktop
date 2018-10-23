@@ -16,7 +16,7 @@
 
     var pusher = new Pusher('30fe8545ec1b5867e4b6', {
       cluster: 'us2',
-      forceTLS: true
+      authEndpoint: "http://localhost:5000/pusher/auth"
     })
 
     var channel = pusher.subscribe(id)
