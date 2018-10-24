@@ -13,6 +13,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class CanvasComponent implements OnInit {
 
+  public sessionId = null;
+
   constructor(
     private route: ActivatedRoute,
     private router: Router
@@ -21,7 +23,7 @@ export class CanvasComponent implements OnInit {
   ngOnInit() {
     this.loadScript('editor.js')
     this.route.params.subscribe(res => {
-      console.log(res);
+      this.sessionId = res.id.split(/[- ]+/).pop();
     });
   }
 
