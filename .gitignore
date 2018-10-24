@@ -16,6 +16,7 @@ npm-debug.log
 # Build-specific
 target/
 dist/
+release-builds
 
 #testing
 src/app/home/
