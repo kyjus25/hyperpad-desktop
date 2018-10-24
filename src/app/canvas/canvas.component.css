@@ -18,7 +18,9 @@ header p {
 
 header p span {
   background-color: white;
-  color: lightgrey;
+  padding: 5px 10px;
+  color: darkorange;
+  border-radius: 5px;
 }
 
 header button {

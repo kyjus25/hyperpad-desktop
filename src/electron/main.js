@@ -50,7 +50,7 @@ function createWindow () {
       maxWidth: 800,
       minHeight: 500,
       maxHeight: 500,
-      icon: path.join(__dirname, 'assets/pokeball.png')
+      icon: path.join(__dirname, 'assets/pngs/icon.png')
     })
 
   // and load the index.html of the app.
