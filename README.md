@@ -2,15 +2,9 @@
 <img src='src/assets/pngs/icon.png'>
 </p>
 
-# Hyperpad
+# Nucleus
 
-A peer-to-peer collaborative text editor for humans and communities.
-
-## What is it?
-
-Hyperpad is a free, open source, peer-to-peer text editor for people and their
-communities. Authors control who gets access, and data is hosted by the peers
-who are interested in it.
+An open source collaborative text and code editor for the desktop
 
 ## Getting Started
 
@@ -43,7 +37,7 @@ electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons
 Build for Windows
 
 ``` bash
-electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName="Pokédex"
+electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName="Nucleus"
 ```
 
 Build for Linux

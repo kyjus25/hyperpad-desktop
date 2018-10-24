@@ -1,10 +1,10 @@
 {
-  "name": "hyperpad-desktop",
-  "productName": "Hyperpad",
-  "description": "Peer-to-peer collaborative text editing on your desktop with Electron.",
-  "version": "2.0.0",
-  "license": "ISC",
-  "author": "Stephen Whitmore <sww@eight.net>",
+  "name": "nucleus",
+  "productName": "Nucleus",
+  "description": "An open source collaborative text and code editor for the desktop",
+  "version": "1.0.1",
+  "license": "GPL",
+  "author": "Justin White <http://juwhite.info>",
   "main": "dist/main.js",
   "scripts": {
     "build-electron": "ng build --base-href . && cp src/electron/* dist",
