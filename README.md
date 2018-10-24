@@ -45,3 +45,6 @@ Build for Linux
 ``` bash
 electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/linux/icon.png --prune=true --out=release-builds
 ```
+
+## Special Thanks
+Shout out to [noffle](https://github.com/noffle/hyperpad-desktop) for the awesome idea!
