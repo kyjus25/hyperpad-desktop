@@ -4,6 +4,7 @@ import {Observable} from 'rxjs/Observable';
 import {Subject} from 'rxjs/Subject';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import {ReplaySubject} from 'rxjs/ReplaySubject';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-landing',
@@ -15,18 +16,16 @@ export class LandingComponent implements OnInit {
   public display = false;
   public sessionID = null;
 
-  constructor() {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit() {}
 
-  public toggleModal() {
-    this.display = true;
+  public createSession() {
+    this.router.navigate(['/canvas/private-' + this.getUniqueId()]);
   }
-
-  public joinSession() {
-    console.log('sessionID is: ', this.sessionID);
-  }
-
   // a unique random key generator
   public getUniqueId () {
     return Math.random().toString(36).substr(2, 9)

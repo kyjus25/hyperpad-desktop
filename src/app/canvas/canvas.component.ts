@@ -20,6 +20,9 @@ export class CanvasComponent implements OnInit {
 
   ngOnInit() {
     this.loadScript('editor.js')
+    this.route.params.subscribe(res => {
+      console.log(res);
+    });
   }
 
 

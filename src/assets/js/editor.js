@@ -2,9 +2,17 @@
 // and gets executed immediately!
 (function () {
   // make doc editable and focus
-  var doc = document.getElementById('doc')
-  doc.contentEditable = true
-  doc.focus()
+
+  // var doc = document.getElementById('doc')
+  // doc.contentEditable = true
+  // doc.focus()
+
+  var editor = CodeMirror.fromTextArea(doc, {
+    lineNumbers: true,
+    mode: 'javascript'
+  })
+
+  console.log(CodeMirror.modes);
 
   // if this is a new doc, generate a unique identifier
   // append it as a query param
@@ -16,14 +24,15 @@
 
     var pusher = new Pusher('30fe8545ec1b5867e4b6', {
       cluster: 'us2',
-      authEndpoint: "http://localhost:5000/pusher/auth"
+      authEndpoint: 'http://localhost:5000/pusher/auth'
     })
 
     var channel = pusher.subscribe(id)
     channel.bind('client-text-edit', function (html) {
       // save the current position
       var currentCursorPosition = getCaretCharacterOffsetWithin(doc)
-      doc.innerHTML = html
+      // doc.innerHTML = html
+      editor.setValue(html);
       // set the previous cursor position
       setCaretPosition(doc, currentCursorPosition)
     })
@@ -32,10 +41,14 @@
     })
   }).then(function (channel) {
     function triggerChange (e) {
-      channel.trigger('client-text-edit', e.target.innerHTML)
+      channel.trigger('client-text-edit', editor.getValue())
     }
+    editor.on('change', function(CodeMirror, change) {
+      console.log('triggerChange');
+      triggerChange();
+    })
+    // doc.addEventListener('input', triggerChange)
 
-    doc.addEventListener('input', triggerChange)
   })
 
   // function to get a query param's value
