@@ -1,3 +1,7 @@
+<p align="center">
+<img src='src/assets/pngs/icon.png'>
+</p>
+
 # Hyperpad
 
 A peer-to-peer collaborative text editor for humans and communities.
