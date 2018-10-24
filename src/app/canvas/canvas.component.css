@@ -8,6 +8,8 @@ header #logo {
   background: url(assets/svgs/atom-white.svg);
   background-size: 200%;
   background-position: 42% 12%;
+  -webkit-app-region: drag;
+  cursor: all-scroll;
 }
 header p {
   color: white;

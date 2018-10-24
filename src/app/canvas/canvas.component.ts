@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {MenuItem} from 'primeng/api';
 import {Observable} from 'rxjs/Observable';
 import {Subject} from 'rxjs/Subject';
@@ -11,9 +11,10 @@ import {ActivatedRoute, Router} from '@angular/router';
   templateUrl: './canvas.component.html',
   styleUrls: ['./canvas.component.css']
 })
-export class CanvasComponent implements OnInit {
+export class CanvasComponent implements OnInit, OnDestroy {
 
   public sessionId = null;
+  private script = null;
 
   constructor(
     private route: ActivatedRoute,
@@ -29,14 +30,22 @@ export class CanvasComponent implements OnInit {
 
 
   public loadScript(js) {
-    console.log('loading ' + js);
     let body = <HTMLDivElement> document.body;
     let script = document.createElement('script');
     script.innerHTML = '';
     script.src = 'assets/js/' + js;
     script.async = true;
     script.defer = true;
+    this.script = script;
     body.appendChild(script);
+  }
+
+  public destroyScript() {
+    this.script.src = "";
+  }
+
+  ngOnDestroy() {
+    this.destroyScript();
   }
 
 }

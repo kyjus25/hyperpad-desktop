@@ -28,7 +28,9 @@
     })
 
     var channel = pusher.subscribe(id)
+    channel.trigger('client-text-edit')
     channel.bind('client-text-edit', function (html) {
+      console.log('FIRED');
       // save the current position
       var currentCursorPosition = editor.getCursor()
       // doc.innerHTML = html
@@ -56,7 +58,6 @@
     var param = window.location.href.split(/[/ ]+/).pop()
     return param
   }
-
 
 
 })()
