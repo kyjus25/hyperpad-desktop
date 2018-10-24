@@ -65,7 +65,7 @@
     "@types/node": "^6.0.106",
     "codelyzer": "^4.0.1",
     "core-js": "^2.4.1",
-    "electron": "~1.8.8",
+    "electron": "~3.0.5",
     "electron-installer-dmg": "^0.2.1",
     "electron-packager": "~8.7.2",
     "electron-winstaller": "^2.5.2",
